@@ -1,0 +1,33 @@
+{
+  "schema": "1.1",
+  "type": "whmcs-gateways",
+  "name": "jovepay",
+  "license": "proprietary",
+  "category": "payments",
+  "description": {
+    "name": "JOVEpay",
+    "tagline": "Accept cryptocurrency payments via JOVEpay.",
+    "long": "JOVEpay is a third-party payment gateway that redirects customers to JOVEpay to complete payment. WHMCS receives IPN notifications when payments are confirmed.",
+    "features": [
+      "Third-party checkout",
+      "HMAC-signed IPN callbacks",
+      "Partial payment handling"
+    ]
+  },
+  "logo": {
+    "filename": "logo.png"
+  },
+  "support": {
+    "homepage": "https://www.jovepay.com/",
+    "learn_more": "https://www.jovepay.com/",
+    "email": "support@jovepay.com",
+    "support_url": "https://www.jovepay.com/",
+    "docs_url": "https://www.jovepay.com/"
+  },
+  "authors": [
+    {
+      "name": "JOVEpay",
+      "homepage": "https://www.jovepay.com/"
+    }
+  ]
+}
