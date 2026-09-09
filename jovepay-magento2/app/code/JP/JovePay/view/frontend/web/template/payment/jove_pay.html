@@ -1,0 +1,69 @@
+<!--
+/**
+ * @copyright: Copyright © 2026 JOVEpay. All rights reserved.
+ * @author   : JOVEpay <support@jovepay.com>
+ */
+-->
+<div class="payment-method jp-jovepay-method" data-bind="css: {'_active': (getCode() == isChecked())}">
+    <div class="payment-method-title field choice">
+        <input type="radio"
+               name="payment[method]"
+               class="radio"
+               data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()" />
+        <label data-bind="attr: {'for': getCode()}" class="label jp-jovepay-payment-method-label">
+            <img class="jp-jovepay-payment-icons__logo"
+                 alt=""
+                 data-bind="attr: { src: require.toUrl('JP_JovePay/images/jovepay.svg') }" />
+            <span class="jp-jovepay-payment-method-label__text" data-bind="text: getTitle()"></span>
+            <span class="jp-jovepay-payment-icons" aria-hidden="true">
+                <span class="jp-jovepay-payment-icons__stack">
+                    <img class="jp-jovepay-payment-icons__coin"
+                         alt="Bitcoin"
+                         style="z-index: 4"
+                         data-bind="attr: { src: require.toUrl('JP_JovePay/images/coins/btc.png') }" />
+                    <img class="jp-jovepay-payment-icons__coin"
+                         alt="Ethereum"
+                         style="z-index: 3"
+                         data-bind="attr: { src: require.toUrl('JP_JovePay/images/coins/eth.png') }" />
+                    <img class="jp-jovepay-payment-icons__coin"
+                         alt="Tether"
+                         style="z-index: 2"
+                         data-bind="attr: { src: require.toUrl('JP_JovePay/images/coins/usdt.png') }" />
+                    <img class="jp-jovepay-payment-icons__coin"
+                         alt="BNB"
+                         style="z-index: 1"
+                         data-bind="attr: { src: require.toUrl('JP_JovePay/images/coins/bnb.png') }" />
+                </span>
+            </span>
+        </label>
+    </div>
+    <div class="payment-method-content">
+        <!-- ko foreach: getRegion('messages') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+        <fieldset class="fieldset" data-bind='attr: {id: "payment_form_" + getCode()}'>
+            <div class="payment-method-note">
+                <span data-bind="html: getRedirectionText()"></span>
+            </div>
+        </fieldset>
+        <div class="checkout-agreements-block">
+            <!-- ko foreach: $parent.getRegion('before-place-order') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button class="action primary checkout"
+                        type="submit"
+                        data-bind="
+                        click: placeOrder,
+                        enable: (getCode() == isChecked()),
+                        attr: {title: $t('Continue')},
+                        css: {disabled: !isPlaceOrderActionAllowed()}
+                        ">
+                    <span data-bind="i18n: 'Continue'"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

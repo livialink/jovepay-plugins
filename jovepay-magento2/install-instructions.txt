@@ -1,0 +1,15 @@
+1. How to install plugin? 
+
+Step 1. Extract all files. 
+Step 2. Upload all file in Magento Root Directory. After upload make sure the plugin path is in magento_root/app/code/JP/JOVEpay
+Step 3. Login to SSH command line of server -> go to magento 2 installed directory and run command "php bin/magento setup:upgrade"
+step 4. Deploy static content and compile code command "php bin/magento setup:di:compile" and "php bin/magento setup:static-content:deploy -f"
+
+Manual installation guide: https://www.liquidweb.com/magento/extensions/how-to-install/
+
+2. How to setup pluging? 
+
+Step 1. Login to Magento Admin go to System->Configuration->Payment Methods 
+  ---> New : Stores -> Configuration -> Stores => Payment Methods -> Other Payment Methods 
+Step 2. Select JOVEpay method and configure the variables "merchant key,Merchant Secret, Order Status" 
+Step 3. Save the configuration and thats it! now you should see JOVEpay payment option in checkout. 

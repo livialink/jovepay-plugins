@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright: Copyright © 2026 JOVEpay. All rights reserved.
+ * @author   : JOVEpay <support@jovepay.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="JP\JovePay\Api\IpnManagementInterface" type="JP\JovePay\Model\IpnManagement"/>
+    <type name="JP\JovePay\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="JP\JovePay\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">JovePayDebug</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">JP\JovePay\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
