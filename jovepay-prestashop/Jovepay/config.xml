@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>Jovepay</name>
+	<displayName><![CDATA[Jovepay]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Pay securely with Jovepay]]></description>
+	<author><![CDATA[Livinus Umeaduma]]></author>
+	<tab><![CDATA[payments_gateways]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>

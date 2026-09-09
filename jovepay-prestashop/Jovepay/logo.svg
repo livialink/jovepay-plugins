@@ -1,0 +1,58 @@
+<svg
+  width="220"
+    height="220"
+  viewBox="0 0 220 220"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- Square background gradient -->
+    <linearGradient id="squareBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081B36" />
+      <stop offset="100%" stop-color="#123A73" />
+    </linearGradient>
+
+    <!-- Subtle inner highlight -->
+    <linearGradient id="innerHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Square background -->
+  <rect
+    x="0"
+    y="0"
+    width="220"
+    height="220"
+    rx="10"
+    fill="url(#squareBg)"
+  />
+  <!-- JOVE -->
+  <text
+    x="10"
+    y="118"
+    font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="44"
+    font-weight="700"
+    fill="#4DA3FF"
+    letter-spacing="1"
+  >
+    JOVE
+  </text>
+
+  <!-- pay -->
+  <text
+    x="130"
+    y="118"
+    font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="48"
+    font-weight="500"
+    fill="#FFFFFF"
+    stroke="#4DA3FF"
+    stroke-width="2"
+    paint-order="stroke fill"
+    letter-spacing="0.5"
+  >
+    pay
+  </text>
+</svg>
