@@ -14,7 +14,7 @@ class JPWC_Gateway extends WC_Payment_Gateway
     {
         $this->id = 'jovepay';
         $this->title = $this->get_option('title');
-        $this->icon = apply_filters('jpwc_icon', JPWC_PLUGIN_URL . 'assets/images/jovepay.svg');
+        $this->icon = apply_filters('jpwc_icon', JPWC_PLUGIN_URL . 'assets/images/icon.svg');
         $this->has_fields = false;
         $this->method_title = __('JOVEpay', 'jovepay-for-woocommerce');
         $this->description = $this->get_option('description');
@@ -37,7 +37,7 @@ class JPWC_Gateway extends WC_Payment_Gateway
      */
     public function get_checkout_coin_icons()
     {
-        $base = JPWC_PLUGIN_URL . 'assets/images/coins/';
+        $base = JPWC_PLUGIN_URL . 'assets/images/';
 
         $icons = array(
             array(

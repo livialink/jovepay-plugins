@@ -7,7 +7,6 @@ Stable tag: 1.0.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-GitHub Plugin URI: https://github.com/livialink/jovepay-plugins/jovepay-for-woocommerce
 
 Accept 100+ cryptocurrencies at WooCommerce checkout with settlement to your wallet via JOVEpay.
 
@@ -131,6 +130,24 @@ Yes. Enable Testnet in the gateway settings and use JOVEpay’s test environment
 2. JOVEpay gateway settings (API Key, theme, testnet).
 3. JOVEpay gateway settings (IPN Secret).
 4. Customer paying with cryptocurrency on the JOVEpay hosted checkout.
+
+== Source code and development ==
+
+Human-readable source for compiled JavaScript ships with this plugin and is also published publicly.
+
+* Public repository: https://github.com/livialink/jovepay-plugins/tree/main/jovepay-for-woocommerce
+* Blocks payment-method source: `resources/js/frontend/index.js`
+* Compiled output: `build/blocks/frontend/blocks.js`
+
+Build tools (`package.json`, `webpack.config.js`) are included so the compiled assets can be regenerated.
+
+= Rebuild the Blocks script =
+
+1. Install Node.js 18 or newer.
+2. From the plugin directory, run `npm install`.
+3. Run `npm run build`.
+
+This uses `@wordpress/scripts` and `@woocommerce/dependency-extraction-webpack-plugin` to compile `resources/js/frontend/index.js` into `build/blocks/frontend/blocks.js`.
 
 == Changelog ==
 

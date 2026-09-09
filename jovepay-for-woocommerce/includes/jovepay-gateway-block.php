@@ -49,8 +49,8 @@ final class JovepayGatewayBlock extends AbstractPaymentMethodType {
 	 */
 	public function get_payment_method_script_handles() {
 
-		$script_path       = '/assets/blocks/frontend/blocks.js';
-		$script_asset_path = JPWC_PLUGIN_DIR_PATH . 'assets/blocks/frontend/blocks.asset.php';
+		$script_path       = '/build/frontend/blocks.js';
+		$script_asset_path = JPWC_PLUGIN_DIR_PATH . 'build/frontend/blocks.asset.php';
 		$script_asset      = file_exists( $script_asset_path )
 			? require( $script_asset_path )
 			: array(
@@ -61,7 +61,7 @@ final class JovepayGatewayBlock extends AbstractPaymentMethodType {
 
 		wp_register_style(
 			'jpwc-checkout-icons',
-			JPWC_PLUGIN_URL . 'assets/css/checkout-icons.css',
+			JPWC_PLUGIN_URL . 'resources/css/checkout-icons.css',
 			array(),
 			JPWC_VERSION
 		);

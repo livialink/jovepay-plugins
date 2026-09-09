@@ -11,12 +11,12 @@
  * Text Domain: jovepay-for-woocommerce
  * Domain Path: /languages
  * Requires at least: 6.0
- * Requires PHP: 8.0
+ * Requires PHP: 7.0
  * Requires Plugins: woocommerce
  * WC requires at least: 8.0
  * WC tested up to: 11.1.0
- * GitHub Plugin URI: https://github.com/livialink/jovepay-plugins/jovepay-for-woocommerce
- * GitHub Branch:  main
+ * GitHub Plugin URI: https://github.com/livialink/jovepay-plugins
+ * GitHub Branch: main
  */
 
 

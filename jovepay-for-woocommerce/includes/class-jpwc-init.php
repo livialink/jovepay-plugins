@@ -136,7 +136,7 @@ class JPWC_Init {
 
         wp_enqueue_style(
             'jpwc-checkout-icons',
-            JPWC_PLUGIN_URL . 'assets/css/checkout-icons.css',
+            JPWC_PLUGIN_URL . 'resources/css/checkout-icons.css',
             array(),
             JPWC_VERSION
         );
@@ -163,7 +163,7 @@ class JPWC_Init {
     public function admin_enqueue_scripts() {
         wp_enqueue_script(
             'jpwc-custom-scripts',
-            JPWC_PLUGIN_URL . 'assets/js/scripts.js',
+            JPWC_PLUGIN_URL . 'resources/js/scripts.js',
             array( 'jquery' ),
             JPWC_VERSION,
             true
