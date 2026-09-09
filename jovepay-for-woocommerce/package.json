@@ -1,0 +1,27 @@
+{
+	"name": "jovepay-for-woocommerce",
+	"title": "JOVEpay for WooCommerce",
+	"version": "1.0.0",
+	"author": "JOVEpay",
+	"license": "GPL-2.0-or-later",
+	"keywords": [],
+	"engines": {
+		"node": ">=6.9.4",
+		"npm": ">=1.1.0"
+	},
+	"devDependencies": {
+		"@woocommerce/dependency-extraction-webpack-plugin": "^4.0.0",
+		"@wordpress/scripts": "^31.2.0",
+		"cross-env": "6.0.3"
+	},
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build && npm run i18n:build",
+		"i18n": "npm run i18n:build",
+		"i18n:build": "npm run i18n:pot && npm run i18n:po-mo",
+		"i18n:pot": "php -d xdebug.max_nesting_level=512 $(which wp) i18n make-pot --exclude=\"node_modules/,languages/,assets/\" --headers='{\"Report-Msgid-Bugs-To\":\"https://www.jovepay.com/support\", \"language-team\":\"LANGUAGE <EMAIL@ADDRESS>\"}' . languages/jovepay-for-woocommerce.pot",
+		"i18n:po-mo": "for f in languages/jovepay-for-woocommerce-*.po; do msgfmt \"$f\" -o \"${f%.po}.mo\"; done",
+		"i18n:json": "$(which wp) i18n make-json languages/ --no-purge",
+		"check-engines": "wp-scripts check-engines"
+	}
+}

@@ -1,0 +1,71 @@
+/* JOVEpay checkout payment icons — logo before label, overlapping coin stack after */
+.jpwc-payment-icons {
+	display: inline-flex;
+	align-items: center;
+	vertical-align: middle;
+	line-height: 1;
+}
+
+.jpwc-payment-icons__logo {
+	display: block;
+	width: auto;
+	height: 1.75rem;
+	max-height: 28px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+.jpwc-payment-icons__stack {
+	display: inline-flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+.jpwc-payment-icons__coin {
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-inline-start: -0.45rem;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
+	object-fit: cover;
+	background: #fff;
+	position: relative;
+}
+
+.jpwc-payment-icons__stack .jpwc-payment-icons__coin:first-child {
+	margin-inline-start: 0;
+}
+
+.jpwc-payment-method-label {
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	vertical-align: middle;
+}
+
+.jpwc-payment-method-label__text {
+	flex: 0 1 auto;
+}
+
+/* Push coin stack to the trailing edge on block checkout rows */
+.wc-block-components-radio-control__label .jpwc-payment-method-label,
+.wc-block-components-radio-control-accordion-option .jpwc-payment-method-label {
+	width: 100%;
+}
+
+.wc-block-components-radio-control__label .jpwc-payment-icons,
+.wc-block-components-radio-control-accordion-option .jpwc-payment-icons {
+	margin-inline-start: auto;
+}
+
+/* Dark / high-contrast themes: keep coin rings readable */
+@media (prefers-color-scheme: dark) {
+	.woocommerce-checkout .jpwc-payment-icons__coin,
+	.wc-block-checkout .jpwc-payment-icons__coin {
+		border-color: #1e1e1e;
+		box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+	}
+}
