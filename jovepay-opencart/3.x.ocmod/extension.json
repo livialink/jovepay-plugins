@@ -1,0 +1,40 @@
+{
+  "name": "JOVEpay Payment Gateway",
+  "code": "jovepay",
+  "version": "1.0.0",
+  "author": "JOVEpay",
+  "link": "https://www.jovepay.com",
+  "type": "payment",
+  "status": "stable",
+  "description": {
+    "en-gb": "Accept cryptocurrency payments with JOVEpay. Support for 100+ cryptocurrencies including USDT, USDC, ETH, BNB, LTC, and more. Fast, secure, and built for global commerce.",
+    "en": "Accept cryptocurrency payments with JOVEpay. Support for 100+ cryptocurrencies including USDT, USDC, ETH, BNB, LTC, and more. Fast, secure, and built for global commerce."
+  },
+  "files": [
+    "upload/admin/controller/extension/payment/jovepay.php",
+    "upload/admin/language/en-gb/extension/payment/jovepay.php",
+    "upload/admin/view/image/payment/jovepay.png",
+    "upload/admin/view/template/extension/payment/jovepay.twig",
+    "upload/catalog/controller/extension/payment/jovepay.php",
+    "upload/catalog/language/en-gb/extension/payment/jovepay.php",
+    "upload/catalog/model/extension/payment/jovepay.php",
+    "upload/catalog/view/theme/default/template/extension/payment/jovepay.twig"
+  ],
+  "compatibility": {
+    "opencart": ">=3.0.0.0 <4.0.0.0"
+  },
+  "php": {
+    "min": "7.1.0",
+    "max": "8.3.0"
+  },
+  "install": {
+    "admin/controller/extension/payment/jovepay.php": "admin/controller/extension/payment/jovepay.php",
+    "admin/language/en-gb/extension/payment/jovepay.php": "admin/language/en-gb/extension/payment/jovepay.php",
+    "admin/view/image/payment/jovepay.png": "admin/view/image/payment/jovepay.png",
+    "admin/view/template/extension/payment/jovepay.twig": "admin/view/template/extension/payment/jovepay.twig",
+    "catalog/controller/extension/payment/jovepay.php": "catalog/controller/extension/payment/jovepay.php",
+    "catalog/language/en-gb/extension/payment/jovepay.php": "catalog/language/en-gb/extension/payment/jovepay.php",
+    "catalog/model/extension/payment/jovepay.php": "catalog/model/extension/payment/jovepay.php",
+    "catalog/view/theme/default/template/extension/payment/jovepay.twig": "catalog/view/theme/default/template/extension/payment/jovepay.twig"
+  }
+}

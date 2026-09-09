@@ -1,0 +1,10 @@
+{
+  "name": "JOVEpay Crypto Payment Gateway",
+  "code": "jovepay",
+  "version": "1.0.0",
+  "author": "Jovepay",
+  "link": "https://jovepay.com",
+  "description": "JovePay crypto payment module for OpenCart 4",
+  "type": "module",
+  "compatibility": "4.0.0.0"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<name>JOVEpay Payment Gateway</name>
+	<code>jovepay</code>
+	<version>1.0.0</version>
+	<author>JOVEpay</author>
+	<link>https://www.jovepay.com</link>
+	
+	<file path="admin/controller/extension/payment/jovepay.php">
+		<operation>
+			<search><![CDATA[class ControllerExtensionPaymentJovepay extends Controller {]]></search>
+			<add position="replace"><![CDATA[class ControllerExtensionPaymentJovepay extends Controller {]]></add>
+		</operation>
+	</file>
+	
+	<file path="catalog/controller/extension/payment/jovepay.php">
+		<operation>
+			<search><![CDATA[class ControllerExtensionPaymentJovepay extends Controller {]]></search>
+			<add position="replace"><![CDATA[class ControllerExtensionPaymentJovepay extends Controller {]]></add>
+		</operation>
+	</file>
+	
+	<file path="catalog/model/extension/payment/jovepay.php">
+		<operation>
+			<search><![CDATA[class ModelExtensionPaymentJovepay extends Model {]]></search>
+			<add position="replace"><![CDATA[class ModelExtensionPaymentJovepay extends Model {]]></add>
+		</operation>
+	</file>
+</modification>
