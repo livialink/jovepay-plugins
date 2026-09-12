@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © JOVEpay. Licensed under GPLv3 or later. See LICENSE.txt.
+ * See LICENSE.txt for license details.
+ */
+-->
+<payment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Payment:etc/payment.xsd">
+    <groups>
+        <group id="jovepay">
+            <label>JOVEpay Payment Method</label>
+        </group>
+    </groups>
+    <methods>
+        <method name="jove_pay">
+            <allow_multiple_address>1</allow_multiple_address>
+        </method>
+    </methods>
+</payment>

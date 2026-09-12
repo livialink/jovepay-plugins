@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © JOVEpay. Licensed under GPLv3 or later. See LICENSE.txt.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="jovepay" frontName="jovepay">
+            <module name="Jovepay_Checkout"/>
+        </route>
+    </router>
+</config>

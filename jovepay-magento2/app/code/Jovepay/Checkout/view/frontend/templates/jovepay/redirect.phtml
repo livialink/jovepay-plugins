@@ -1,0 +1,15 @@
+<?php
+/**
+ * Copyright © JOVEpay. Licensed under GPLv3 or later. See LICENSE.txt.
+ *
+ * @var \Jovepay\Checkout\Block\Redirect $block
+ */
+
+$redirectUrl = $block->getPaymentBaseUrl() . $block->getEncodedOrderPayload();
+?>
+<script type="text/javascript">
+    require(['jquery'], function () {
+        'use strict';
+        window.location.replace(<?= /* @noEscape */ json_encode($redirectUrl) ?>);
+    });
+</script>

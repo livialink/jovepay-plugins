@@ -1,0 +1,28 @@
+{
+    "name": "jovepay/magento2",
+    "description": "The official JOVEpay checkout extension for magento2",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "GPL-3.0-or-later"
+    ],
+    "authors": [
+        {
+            "name": "JOVEpay",
+            "email": "dev@jovepay.com",
+            "homepage": "https://www.jovepay.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.3"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Jovepay\\Checkout\\": ""
+        }
+    }
+}
